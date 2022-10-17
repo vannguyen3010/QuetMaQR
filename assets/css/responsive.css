@@ -1,0 +1,306 @@
+/*iPhone 6+, 7+, 8+*/
+/* @media only screen and (min-width: 414px) and (max-width: 736px)  */
+@media only screen and (max-width: 737px) {
+  .home-colum-10 {
+    width: 44%;
+  }
+  .menu-header span {
+    margin-left: 10%;
+  }
+  #nav {
+  }
+  #nav > li {
+    display: block;
+  }
+  #nav li a {
+    color: #000;
+  }
+  #nav {
+    display: none;
+    height: 185px;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    left: 0;
+  }
+  .mobile-menu-btn {
+    display: block;
+    z-index: 99;
+    height: 45px;
+  }
+  .menu-bag {
+    width: 98%;
+  }
+  .home-list {
+    height: 72%;
+  }
+  .menu-icon-btn {
+    margin-left: 40%;
+  }
+  .footer-manage {
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+    height: 70px;
+  }
+  .footer-item {
+    height: 75px;
+    border-radius: 10px;
+  }
+  .footer-filter-btn-1,
+  .footer-filter-btn-2 {
+    width: 50%;
+    height: 60px;
+    margin: 7px;
+  }
+  .footer-manage-book-icon,
+  .footer-manage-bar-icon {
+    height: 60px;
+  }
+  .manage-head span {
+    margin-left: 50px;
+  }
+  .manage-pay {
+    display: none;
+    margin: 0;
+    width: 100%;
+    height: 455px;
+  }
+  .manage-table {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .list-table {
+    margin: 0 0;
+  }
+  .list-table-money {
+    display: initial;
+  }
+  .money {
+    margin: 0;
+  }
+  .manage-table-item {
+    height: 73%;
+  }
+  .manage-history {
+    margin: 10px;
+    width: 95%;
+  }
+  .sales-turnover {
+    padding: 0;
+    margin-left: 0;
+  }
+  .sales-order-item span {
+    margin-left: 150px;
+  }
+  .sales-order-detail {
+    margin-left: 550px;
+  }
+  /* .footer-manage {
+    margin-top: 75px;
+    width: 100%;
+    height: 60px;
+  } */
+  .manage-sales-turnover {
+    height: 600px;
+    width: 98%;
+    margin: -76px 5px;
+  }
+  .manage-sales-container {
+    width: 100%;
+  }
+  .knife-img,
+  .growth-img {
+    margin: 0;
+  }
+}
+
+/*Tablet*/
+@media (min-width: 740px) and (max-width: 1025px) {
+  /* .container {
+    background-color: #4070f4;
+  } */
+  .container .forms {
+    padding: 10px;
+    margin-top: 170px;
+    margin-left: -5px;
+  }
+  .input-field input {
+    font-size: 20px;
+  }
+  .manage__header {
+    font-size: 30px;
+    height: 70px;
+  }
+  .home-list {
+    height: 77.35%;
+  }
+  .home_area-heading {
+    margin-top: -18px;
+  }
+  .footer-filter-btn-1,
+  .footer-filter-btn-2 {
+    cursor: pointer;
+    border-radius: 5px;
+    width: 50%;
+    height: 60px;
+    margin-left: 6px;
+  }
+  .home-colum-10 {
+    width: 21%;
+    margin: 14px;
+  }
+  .home-colum-btn {
+    margin: 10px;
+    height: 40px;
+    border-radius: 10px;
+  }
+  .menu-header {
+    height: 70px;
+  }
+  .menu-bag {
+    width: 100%;
+  }
+  .menu-header button {
+    height: 50px;
+  }
+  .menu-header span {
+    margin-top: -30px;
+    font-size: 30px;
+    color: #fff;
+    display: flex;
+  }
+  .menu-icon-btn {
+    margin-left: 65%;
+    margin-top: 12px;
+  }
+  .manage-pay {
+    margin-top: 0;
+    height: 775px;
+    width: 100%;
+    float: right;
+    display: none;
+  }
+  .footer-manage {
+    margin-top: 1px;
+    padding: 0 16px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+  }
+  .footer-manage-book-icon,
+  .footer-manage-bar-icon {
+    height: 60px;
+  }
+  .manage-head {
+    height: 50px;
+  }
+  .manage-head span {
+    margin-left: 160px;
+    font-size: 30px;
+  }
+  .manage-table-item {
+    height: 60%;
+  }
+  .manage-table h3 {
+    font-size: 30px;
+  }
+  .list-table {
+    font-size: 25px;
+  }
+  .list-table-money {
+    font-size: 25px;
+  }
+  .money {
+    width: 100px;
+  }
+  .info-product {
+    font-size: 20px;
+    height: 80px;
+    font-weight: 400;
+  }
+  .manage-icon-btn {
+    margin-left: 90%;
+    margin-top: -23px;
+  }
+  .sales-heading {
+    height: 200px;
+  }
+  .manage-sales-turnover {
+    width: 100%;
+    height: 888px;
+    margin: -71px 0;
+  }
+  .manage-sales-container {
+    width: 95%;
+  }
+  .manage-history {
+    margin: 0 -27px;
+    width: 100%;
+    height: 407px;
+    margin-top: 100px;
+  }
+}
+/*Tablet Pro*/
+/* @media (min-width: 1023px) and (max-width: 1367px) {
+  .container .forms {
+    margin-top: 300px;
+  }
+  .container .form .title {
+    font-size: 50px;
+  }
+  .form .text {
+    font-size: 28px;
+  }
+  .manage__header {
+    font-size: 30px;
+    height: 100px;
+  }
+  .manage__header h2 {
+    font-size: 30px;
+  }
+  .home-colum-btn {
+    width: 20%;
+    height: 90px;
+    font-size: 30px;
+  }
+  .home-list {
+    height: 75%;
+  }
+  .home-colum-10 {
+    width: 22%;
+    margin: 14px;
+    padding: -5px -6px;
+    height: 136px;
+  }
+  .home_area-table {
+    width: 100%;
+    margin: 1px 0px;
+    height: 100%;
+  }
+  .home_area-img {
+    object-fit: scale-down;
+    width: 75px;
+  }
+  .footer-item {
+    height: 115px;
+  }
+  .footer-filter-btn-1,
+  .footer-filter-btn-2 {
+    border-radius: 10px;
+    height: 80px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+  }
+  .knife-img,
+  .growth-img {
+    font-size: 47px;
+    align-items: center;
+    display: flex;
+    padding: 12px;
+  }
+} */

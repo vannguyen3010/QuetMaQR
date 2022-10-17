@@ -1,0 +1,286 @@
+
+/*Tablet*/
+@media (min-width: 740px) and (max-width: 1025px){
+    .container {
+        margin-top: -12px;
+        width: 100%;
+        height: 1032px;
+        background-color: rgba(0, 0, 0, 0.4);
+        position: relative;
+        margin-left: -6px;
+    }
+    .header-nav {
+        padding: 34px;
+        height: 100px;
+    }
+    .client-search {
+        width: 100%;
+        height: 70px;
+        padding: 22px;
+    }
+    .search-icon {
+        height: 56px;
+        margin: -20px;
+        margin-top: -13px;
+        width: 63px;
+        padding: 16px;
+    }
+    .input-heading {
+        font-size: 20px;
+        width: 97%;
+        height: 56px;
+        margin-top: -13px;
+    }
+    #headers{
+        z-index: 99;
+        height: 70px;
+    }
+    
+   
+    #nav li a{
+        line-height: 66px;
+    }
+    .client-manage {
+        height: 727px;
+        margin-top: 72px;
+    }
+    .client-manage-item{
+        width: 98%;
+        height: 100px;
+    }
+    .client-icon{
+        margin-left: 55%;
+    }
+    .client-bill{
+        height: 702px;
+        margin-top: 72px;
+    }
+    .client-bill-item {
+        margin: 10px 11px -6px;
+    }
+    .bill-icon-btn {
+        margin-left: 23%;
+    }
+    .list-oder {
+        display: none;
+        width: 100%;
+        height: 100%;
+        margin-top: -10px;
+    }
+    .list-table{
+        height: 170px;
+        font-size: 23px;
+    }
+    .close-arrow {
+        padding: 18px 27px;
+    }
+    .client-bill {
+        height: 760px;
+        margin-top: 15px;
+    }
+    .bill-icon-btn {
+        margin-left: 55%;
+    }
+}
+/*Tablet Pro*/
+@media (min-width: 1023px) and (max-width: 1340px) {
+    
+    .container {
+        height: 1342px;
+    }
+    .header-nav {
+        font-size: 32px;
+    }
+    .heading {
+        font-size: 40px;
+    }
+    .list-icon {
+        font-size: 33px;
+    }
+    .client-manage {
+        height: 1036px;
+        margin-top: 60px;
+    }
+    .input-heading{
+        font-size: 25px;
+    }
+    .client-bill{
+        height: 1083px;
+    }
+    .client-manage-item {
+        font-size: 22px;
+        width: 98%;
+    }
+    .client-icon {
+        margin-left: 60%;
+    }
+    .list-table {
+        height: 200px;
+        font-size: 23px;
+    }
+    #nav li a{
+        font-size: 20px;
+    }
+    .client-heading {
+        font-size: 26px;
+    }
+    .footer-client{
+        height: 80px;
+    }
+    .close-arrow {
+        padding: 30px 41px;
+    }
+}
+
+
+/*iPhone 6, 7, 8*/
+@media only screen and (min-width: 374px) and (max-width: 668px){
+    .container {
+        /* display: none; */
+        width: 100%;
+        height: 667px;
+        background-color: rgba(0, 0, 0, 0.4);
+        position: relative;
+    }
+    #headers {
+        z-index: 99;
+        overflow: hidden;
+    }
+    .client-manage {
+        height: 486px;
+    }
+    .mobile-menu-btn {
+        font-size: 20px;
+        display: block;
+        padding: 13px 13px 17px;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+    .mobile-menu-btn {
+        height: 45px;
+        right: 4px;
+        margin: 1px;
+    }
+    .modal{
+        left: -30px;
+    }
+    .client-search{
+        width: 93%;
+    }
+    .client-icon{
+        margin-left: 16%;
+    }
+    #nav {
+        display: block;
+        width: 100%;
+        height: 185px;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    #nav .subnav {
+        padding: 0 3 0px;
+        z-index: 99;
+        position: fixed;
+    }
+    .subnav {
+        
+    }
+    #nav li {
+        width: 81%;
+        display: block;
+    }
+    #nav li a{
+        color: #fff;
+    }
+    .list-table{
+        height: 160px;
+    }
+    .list-oder{
+        margin-top: -30px;
+        height: 700px;
+    }
+    .client-bill{
+        height: 500px;
+    }
+    .bill-icon-btn{
+        margin-left: 30%;
+    }
+    
+
+}
+/*iPhone 6+, 7+, 8+*/
+/* @media only screen and (min-width: 414px) and (max-width: 736px)  */
+@media only screen and (max-width: 737px){
+    .container {
+        /* display: none; */
+        width: 100%;
+        height: 730px;
+        background-color: rgba(0, 0, 0, 0.4);
+        position: relative;
+    }
+    #headers {
+        z-index: 99;
+        overflow: hidden;
+    }
+    .client-manage {
+        height: 538px;
+    }
+    .mobile-menu-btn {
+        font-size: 20px;
+        display: block;
+        padding: 13px 13px 17px;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+    .mobile-menu-btn {
+        height: 45px;
+        margin: 1px;
+    }
+    .modal{
+        left: -30px;
+    }
+    .client-search{
+        width: 93%;
+    }
+    
+    .client-icon{
+        margin-left: 23%;
+        display: none;
+    }
+
+    #nav {
+        display: block;
+        width: 100%;
+        height: 185px;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    #nav .subnav {
+        padding: 0 3 0px;
+        z-index: 99;
+        position: fixed;
+    }
+    .subnav {
+        
+    }
+    #nav li {
+        width: 81%;
+        display: block;
+    }
+    #nav li a{
+        color: #fff;
+    }
+    .list-table{
+        height: 160px;
+    }
+    .list-oder{
+        margin-top: -30px;
+        height: 700px;
+    }
+    .client-bill{
+        height: 500px;
+    }
+    .bill-icon-btn{
+        margin-left: 30%;
+    }
+}
+
+

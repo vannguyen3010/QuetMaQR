@@ -1,0 +1,972 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fontawesome-free-6.2.0-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/themify-icons/themify-icons.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="forms" id="froms">
+        <div id="contactForm" class="form login">
+          <span class="title">Login</span>
+          <form onsubmit="xignUp()" action="#">
+            <div class="input-field">
+              <input id="username" type="text"placeholder="Nhập tài khoản" required/>
+              <i class="uil uil-envelope icon"></i>
+            </div>
+            <div class="input-field">
+              <input id="password" type="password" class="password" placeholder="Nhập password" required/>
+              <i class="uil uil-lock icon"></i>
+              <i class="uil uil-eye-slash showHidePw"></i>
+            </div>
+
+            <div class="checkbox-text">
+              <div class="checkbox-content">
+                <input type="checkbox" id="logCheck" />
+                <label for="logCheck" class="text">Remember me</label>
+              </div>
+              <a href="#" class="text">Forgot password?</a>
+            </div>
+
+            <div class="input-field button">
+              <!-- <input type="button" id="sighUp button login-btn"value="Login"> -->
+              <!-- <button value="Login" type="submit" id="login login-btn button">Login</button> -->
+              <button type="submit">Submit</button>
+
+              <!-- Login -->
+            </div>
+          </form>
+
+          <div class="login-signup">
+            <span class="text"
+              >Not a member?
+              <a href="#" class="text signup-link">Signup Now</a>
+            </span>
+          </div>
+        </div>
+
+        <div class="form signup">
+          <span class="title">Registration</span>
+
+          <form action="#">
+            <div class="input-field">
+              <input type="text" placeholder="Enter your name" required />
+              <i class="uil uil-user"></i>
+            </div>
+            <div class="input-field">
+              <input type="text" placeholder="UserName    " required />
+              <i class="uil uil-envelope icon"></i>
+            </div>
+            <div class="input-field">
+              <input
+                type="password"
+                class="password"
+                placeholder="Create a password"
+                required
+              />
+              <i class="uil uil-lock icon"></i>
+            </div>
+            <div class="input-field">
+              <input
+                type="password"
+                class="password"
+                placeholder="Confirm a password"
+                required
+              />
+              <i class="uil uil-lock icon"></i>
+              <i class="uil uil-eye-slash showHidePw"></i>
+            </div>
+
+            <div class="checkbox-text">
+              <div class="checkbox-content">
+                <input type="checkbox" id="termCon" />
+                <label for="termCon" class="text"
+                  >I accepted all terms and conditions</label
+                >
+              </div>
+            </div>
+
+            <div class="input-field button">
+              <input type="button" value="Signup" />
+            </div>
+          </form>
+
+          <div class="login-signup">
+            <span class="text"
+              >Already a member?
+              <a href="#" class="text login-link">Login Now</a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <!-- end login -->
+
+      <div class="manage menu-login" id="manage">
+        <div class="manage__header">
+          <h2>Quản lý</h2>
+          <div class="manage__header-user-icon">
+            <a href="#">
+              <i class="fa-regular fa-user"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="home-colum-2">
+          <button class="home-colum-btn">Khu vực 1</button>
+          <button class="home-colum-btn">Khu vực 2</button>
+          <button class="home-colum-btn">Mang về</button>
+        </div>
+        <div class="home-list">
+          <div
+            onclick="myTable()"
+            id="js-area-table"
+            href="#"
+            class="home-colum-10 col home_area-table"
+          >
+            <span class="home_area-heading">Bàn 1</span>
+            <img src="./assets/img/table.jpg" alt="" class="home_area-img" />
+          </div>
+          <div
+            onclick="myTable()"
+            id="js-area-table"
+            href="#"
+            class="home-colum-10 col home_area-table"
+          >
+            <span class="home_area-heading">Bàn 1</span>
+            <img src="./assets/img/table.jpg" alt="" class="home_area-img" />
+          </div>
+          <div
+            onclick="myTable()"
+            id="js-area-table"
+            href="#"
+            class="home-colum-10 col home_area-table"
+          >
+            <span class="home_area-heading">Bàn 1</span>
+            <img src="./assets/img/table.jpg" alt="" class="home_area-img" />
+          </div>
+          <div
+            onclick="myTable()"
+            id="js-area-table"
+            href="#"
+            class="home-colum-10 col home_area-table"
+          >
+            <span class="home_area-heading">Bàn 1</span>
+            <img src="./assets/img/table.jpg" alt="" class="home_area-img" />
+          </div>
+          <div
+            onclick="myTable()"
+            id="js-area-table"
+            href="#"
+            class="home-colum-10 col home_area-table"
+          >
+            <span class="home_area-heading">Bàn 1</span>
+            <img src="./assets/img/table.jpg" alt="" class="home_area-img" />
+          </div>
+          <div
+            onclick="myTable()"
+            id="js-area-table"
+            href="#"
+            class="home-colum-10 col home_area-table"
+          >
+            <span class="home_area-heading">Bàn 1</span>
+            <img src="./assets/img/table.jpg" alt="" class="home_area-img" />
+          </div>
+          <div
+            onclick="myTable()"
+            id="js-area-table"
+            href="#"
+            class="home-colum-10 col home_area-table"
+          >
+            <span class="home_area-heading">Bàn 1</span>
+            <img src="./assets/img/table.jpg" alt="" class="home_area-img" />
+          </div>
+          <div
+            onclick="myTable()"
+            id="js-area-table"
+            href="#"
+            class="home-colum-10 col home_area-table"
+          >
+            <span class="home_area-heading">Bàn 1</span>
+            <img src="./assets/img/table.jpg" alt="" class="home_area-img" />
+          </div>
+          <div
+            onclick="myTable()"
+            id="js-area-table"
+            href="#"
+            class="home-colum-10 col home_area-table"
+          >
+            <span class="home_area-heading">Bàn 1</span>
+            <img src="./assets/img/table.jpg" alt="" class="home_area-img" />
+          </div>
+          <div
+            onclick="myTable()"
+            id="js-area-table"
+            href="#"
+            class="home-colum-10 col home_area-table"
+          >
+            <span class="home_area-heading">Bàn 1</span>
+            <img src="./assets/img/table.jpg" alt="" class="home_area-img" />
+          </div>
+          <div
+            onclick="myTable()"
+            id="js-area-table"
+            href="#"
+            class="home-colum-10 col home_area-table"
+          >
+            <span class="home_area-heading">Bàn 1</span>
+            <img src="./assets/img/table.jpg" alt="" class="home_area-img" />
+          </div>
+          <div
+            onclick="myTable()"
+            id="js-area-table"
+            href="#"
+            class="home-colum-10 col home_area-table"
+          >
+            <span class="home_area-heading">Bàn 1</span>
+            <img src="./assets/img/table.jpg" alt="" class="home_area-img" />
+          </div>
+          <div
+            onclick="myTable()"
+            id="js-area-table"
+            href="#"
+            class="home-colum-10 col home_area-table"
+          >
+            <span class="home_area-heading">Bàn 1</span>
+            <img src="./assets/img/table.jpg" alt="" class="home_area-img" />
+          </div>
+          <div
+            onclick="myTable()"
+            id="js-area-table"
+            href="#"
+            class="home-colum-10 col home_area-table"
+          >
+            <span class="home_area-heading">Bàn 1</span>
+            <img src="./assets/img/table.jpg" alt="" class="home_area-img" />
+          </div>
+          <div
+            onclick="myTable()"
+            id="js-area-table"
+            href="#"
+            class="home-colum-10 col home_area-table"
+          >
+            <span class="home_area-heading">Bàn 1</span>
+            <img src="./assets/img/table.jpg" alt="" class="home_area-img" />
+          </div>
+          <div
+            onclick="myTable()"
+            id="js-area-table"
+            href="#"
+            class="home-colum-10 col home_area-table"
+          >
+            <span class="home_area-heading">Bàn 1</span>
+            <img src="./assets/img/table.jpg" alt="" class="home_area-img" />
+          </div>
+          <div
+            onclick="myTable()"
+            id="js-area-table"
+            href="#"
+            class="home-colum-10 col home_area-table"
+          >
+            <span class="home_area-heading">Bàn 1</span>
+            <img src="./assets/img/table.jpg" alt="" class="home_area-img" />
+          </div>
+          <div
+            onclick="myTable()"
+            id="js-area-table"
+            href="#"
+            class="home-colum-10 col home_area-table"
+          >
+            <span class="home_area-heading">Bàn 1</span>
+            <img src="./assets/img/table.jpg" alt="" class="home_area-img" />
+          </div>
+          <div
+            onclick="myTable()"
+            id="js-area-table"
+            href="#"
+            class="home-colum-10 col home_area-table"
+          >
+            <span class="home_area-heading">Bàn 1</span>
+            <img src="./assets/img/table.jpg" alt="" class="home_area-img" />
+          </div>
+          <div
+            onclick="myTable()"
+            id="js-area-table"
+            href="#"
+            class="home-colum-10 col home_area-table"
+          >
+            <span class="home_area-heading">Bàn 1</span>
+            <img src="./assets/img/table.jpg" alt="" class="home_area-img" />
+          </div>
+          <div
+            onclick="myTable()"
+            id="js-area-table"
+            href="#"
+            class="home-colum-10 col home_area-table"
+          >
+            <span class="home_area-heading">Bàn 1</span>
+            <img src="./assets/img/table.jpg" alt="" class="home_area-img" />
+          </div>
+          <div
+            onclick="myTable()"
+            id="js-area-table"
+            href="#"
+            class="home-colum-10 col home_area-table"
+          >
+            <span class="home_area-heading">Bàn 1</span>
+            <img src="./assets/img/table.jpg" alt="" class="home_area-img" />
+          </div>
+          <div
+            onclick="myTable()"
+            id="js-area-table"
+            href="#"
+            class="home-colum-10 col home_area-table"
+          >
+            <span class="home_area-heading">Bàn 1</span>
+            <img src="./assets/img/table.jpg" alt="" class="home_area-img" />
+          </div>
+          <div
+            onclick="myTable()"
+            id="js-area-table"
+            href="#"
+            class="home-colum-10 col home_area-table"
+          >
+            <span class="home_area-heading">Bàn 1</span>
+            <img src="./assets/img/table.jpg" alt="" class="home_area-img" />
+          </div>
+        </div>
+
+        <div class="footer-item">
+          <buttonon
+            click="myFunction()"
+            class="footer-filter-btn-1"
+            id="filter"
+          >
+            <i class="knife-img ti-write"></i>
+            QL THỰC ĐƠN
+          </buttonon>
+
+          <button onclick="myFunction1()" class="col footer-filter-btn-2">
+            <i class="growth-img ti-bar-chart"></i>
+            QL DOANH SỐ
+          </button>
+        </div>
+      </div>
+      <div class="modal-menu menu-list" id="menu-list">
+        <header class="menu-header">
+          <button
+            onclick="myFunction3()"
+            id="close-arrow"
+            class="btn-img-arrow-1"
+          >
+            <i class="fa-sharp fa-solid fa-arrow-left"></i>
+          </button>
+          <span>Quản lý Thực Đơn</span>
+        </header>
+        <div id="list-item">
+          <div id="mobile-menu" class="mobile-menu-btn">
+            <i class="ti-menu"></i>
+          </div>
+          <ul id="nav">
+            <li><a href="#">Hay dùng</a></li>
+            <li><a href="#">Món ăn</a></li>
+            <li>
+              <a href="#">
+                Nước uống
+                <i class="nav-arrow-down ti-arrow-circle-down"></i>
+              </a>
+              <ul class="subnav">
+                <li><a href="">Nước ngọt</a></li>
+                <li><a href="">Trà sữa</a></li>
+                <li><a href="">Nước ép</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                Khác
+                <i class="nav-arrow-down ti-arrow-circle-down"></i>
+              </a>
+              <ul class="subnav">
+                <li><a href="#">Rau thêm</a></li>
+                <li><a href="#">Mì thêm</a></li>
+                <li><a href="#">Khác</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div id="js-menu-bag" class="menu-bag">
+          <div class="menu-list-tab">
+            <img
+              class="product-img"
+              src="	https://gmarket24h.com/images/thumbs/0006384_nuoc-ngot-coca-cola-lon-sleek-320ml_510.png"
+              alt=""
+            />
+            <div class="product-heading">
+              <span>Coca Cola </span>
+            </div>
+            <div class="menu-icon-btn">
+              <button onclick="onclickduavaogiohang()" class="check-icon">
+                <i class="ti-check"></i>
+              </button>
+              <button class="close-icon">
+                <i class="ti-close"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="menu-list-tab">
+            <img
+              class="product-img"
+              src="	https://gmarket24h.com/images/thumbs/0006384_nuoc-ngot-coca-cola-lon-sleek-320ml_510.png"
+              alt=""
+            />
+            <div class="product-heading">
+              <span>Coca Cola </span>
+            </div>
+            <div class="menu-icon-btn">
+              <button onclick="onclickduavaogiohang()" class="check-icon">
+                <i class="ti-check"></i>
+              </button>
+              <button class="close-icon">
+                <i class="ti-close"></i>
+              </button>
+            </div>
+          </div>
+          <div class="menu-list-tab">
+            <img
+              class="product-img"
+              src="	https://gmarket24h.com/images/thumbs/0006384_nuoc-ngot-coca-cola-lon-sleek-320ml_510.png"
+              alt=""
+            />
+            <div class="product-heading">
+              <span>Coca Cola </span>
+            </div>
+            <div class="menu-icon-btn">
+              <button onclick="onclickduavaogiohang()" class="check-icon">
+                <i class="ti-check"></i>
+              </button>
+              <button class="close-icon">
+                <i class="ti-close"></i>
+              </button>
+            </div>
+          </div>
+          <div class="menu-list-tab">
+            <img
+              class="product-img"
+              src="	https://gmarket24h.com/images/thumbs/0006384_nuoc-ngot-coca-cola-lon-sleek-320ml_510.png"
+              alt=""
+            />
+            <div class="product-heading">
+              <span>Coca Cola </span>
+            </div>
+            <div class="menu-icon-btn">
+              <button onclick="onclickduavaogiohang()" class="check-icon">
+                <i class="ti-check"></i>
+              </button>
+              <button class="close-icon">
+                <i class="ti-close"></i>
+              </button>
+            </div>
+          </div>
+          <div class="menu-list-tab">
+            <img
+              class="product-img"
+              src="	https://gmarket24h.com/images/thumbs/0006384_nuoc-ngot-coca-cola-lon-sleek-320ml_510.png"
+              alt=""
+            />
+            <div class="product-heading">
+              <span>Coca Cola </span>
+            </div>
+            <div class="menu-icon-btn">
+              <button onclick="onclickduavaogiohang()" class="check-icon">
+                <i class="ti-check"></i>
+              </button>
+              <button class="close-icon">
+                <i class="ti-close"></i>
+              </button>
+            </div>
+          </div>
+          <div class="menu-list-tab">
+            <img
+              class="product-img"
+              src="	https://gmarket24h.com/images/thumbs/0006384_nuoc-ngot-coca-cola-lon-sleek-320ml_510.png"
+              alt=""
+            />
+            <div class="product-heading">
+              <span>Coca Cola </span>
+            </div>
+            <div class="menu-icon-btn">
+              <button onclick="onclickduavaogiohang()" class="check-icon">
+                <i class="ti-check"></i>
+              </button>
+              <button class="close-icon">
+                <i class="ti-close"></i>
+              </button>
+            </div>
+          </div>
+          <div class="menu-list-tab">
+            <img
+              class="product-img"
+              src="	https://gmarket24h.com/images/thumbs/0006384_nuoc-ngot-coca-cola-lon-sleek-320ml_510.png"
+              alt=""
+            />
+            <div class="product-heading">
+              <span>Coca Cola </span>
+            </div>
+            <div class="menu-icon-btn">
+              <button onclick="onclickduavaogiohang()" class="check-icon">
+                <i class="ti-check"></i>
+              </button>
+              <button class="close-icon">
+                <i class="ti-close"></i>
+              </button>
+            </div>
+          </div>
+          <div class="menu-list-tab">
+            <img
+              class="product-img"
+              src="	https://gmarket24h.com/images/thumbs/0006384_nuoc-ngot-coca-cola-lon-sleek-320ml_510.png"
+              alt=""
+            />
+            <div class="product-heading">
+              <span>Coca Cola </span>
+            </div>
+            <div class="menu-icon-btn">
+              <button onclick="onclickduavaogiohang()" class="check-icon">
+                <i class="ti-check"></i>
+              </button>
+              <button class="close-icon">
+                <i class="ti-close"></i>
+              </button>
+            </div>
+          </div>  
+          <div class="menu-list-tab">
+            <img
+              class="product-img"
+              src="	https://gmarket24h.com/images/thumbs/0006384_nuoc-ngot-coca-cola-lon-sleek-320ml_510.png"
+              alt=""
+            />
+            <div class="product-heading">
+              <span>Coca Cola </span>
+            </div>
+            <div class="menu-icon-btn">
+              <button onclick="onclickduavaogiohang()" class="check-icon">
+                <i class="ti-check"></i>
+              </button>
+              <button class="close-icon">
+                <i class="ti-close"></i>
+              </button>
+            </div>
+          </div>
+          <div class="menu-list-tab">
+            <img
+              class="product-img"
+              src="	https://gmarket24h.com/images/thumbs/0006384_nuoc-ngot-coca-cola-lon-sleek-320ml_510.png"
+              alt=""
+            />
+            <div class="product-heading">
+              <span>Coca Cola </span>
+            </div>
+            <div class="menu-icon-btn">
+              <button onclick="onclickduavaogiohang()" class="check-icon">
+                <i class="ti-check"></i>
+              </button>
+              <button class="close-icon">
+                <i class="ti-close"></i>
+              </button>
+            </div>
+          </div>
+          <div class="menu-list-tab">
+            <img
+              class="product-img"
+              src="	https://gmarket24h.com/images/thumbs/0006384_nuoc-ngot-coca-cola-lon-sleek-320ml_510.png"
+              alt=""
+            />
+            <div class="product-heading">
+              <span>Coca Cola </span>
+            </div>
+            <div class="menu-icon-btn">
+              <button onclick="onclickduavaogiohang()" class="check-icon">
+                <i class="ti-check"></i>
+              </button>
+              <button class="close-icon">
+                <i class="ti-close"></i>
+              </button>
+            </div>
+          </div>
+          <div class="menu-list-tab">
+            <img
+              class="product-img"
+              src="	https://gmarket24h.com/images/thumbs/0006384_nuoc-ngot-coca-cola-lon-sleek-320ml_510.png"
+              alt=""
+            />
+            <div class="product-heading">
+              <span>Coca Cola </span>
+            </div>
+            <div class="menu-icon-btn">
+              <button onclick="onclickduavaogiohang()" class="check-icon">
+                <i class="ti-check"></i>
+              </button>
+              <button class="close-icon">
+                <i class="ti-close"></i>
+              </button>
+            </div>
+          </div>
+          <div class="menu-list-tab">
+            <img
+              class="product-img"
+              src="	https://gmarket24h.com/images/thumbs/0006384_nuoc-ngot-coca-cola-lon-sleek-320ml_510.png"
+              alt=""
+            />
+            <div class="product-heading">
+              <span>Coca Cola </span>
+            </div>
+            <div class="menu-icon-btn">
+              <button onclick="onclickduavaogiohang()" class="check-icon">
+                <i class="ti-check"></i>
+              </button>
+              <button class="close-icon">
+                <i class="ti-close"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="js-manage-pay" class="manage-pay">
+          <header class="manage-head">
+            <button
+              onclick="myClosess()"
+              id="close-arrow-2"
+              class="btn-img-arrow-2"
+            >
+              <i class="fa-sharp fa-solid fa-arrow-left"></i>
+            </button>
+            <span>Chi Tiết Hóa Đơn</span>
+          </header>
+          <div class="manage-table">
+            <h3>Bàn 6</h3>
+            <div class="list-table">
+              <i class="ti-money"></i>
+              <span>Tổng hóa đơn : 135.000 VND</span>
+            </div>
+            <div class="list-table">
+              <i class="ti-time"></i>
+              <span>09/09/2022 6:30PM</span>
+            </div>
+            <div class="list-table-money">
+              <span>Giảm Giá</span>
+              <div class="money">10.000</div>
+            </div>
+          </div>
+          <div class="manage-table-item">
+            <div class="info-product">
+              <div class="info-product-sl">
+                <span class="info-1">2.00 Lon</span>
+                <span class="info-2">15.000</span>
+                <span class="info-3">15.000</span>
+              </div>
+              <div class="info-product-note">
+                <span>Sprite</span>
+                <span>Không lạnh</span>
+              </div>
+              <div class="manage-icon-btn">
+                <button class="note-icon js-buy-ticket">
+                  <i class="ti-notepad"></i>
+                </button>
+                <button class="close-icon-2">
+                  <i class="ti-close"></i>
+                </button>
+              </div>
+            </div>
+            <div class="info-product">
+              <div class="info-product-sl">
+                <span class="info-1">2.00 Lon</span>
+                <span class="info-2">15.000</span>
+                <span class="info-3">15.000</span>
+              </div>
+              <div class="info-product-note">
+                <span>Sprite</span>
+                <span>Không lạnh</span>
+              </div>
+              <div class="manage-icon-btn">
+                <button class="note-icon js-buy-ticket">
+                  <i class="ti-notepad"></i>
+                </button>
+                <button class="close-icon-2">
+                  <i class="ti-close"></i>
+                </button>
+              </div>
+            </div>
+            <div class="info-product">
+              <div class="info-product-sl">
+                <span class="info-1">2.00 Lon</span>
+                <span class="info-2">15.000</span>
+                <span class="info-3">15.000</span>
+              </div>
+              <div class="info-product-note">
+                <span>Sprite</span>
+                <span>Không lạnh</span>
+              </div>
+              <div class="manage-icon-btn">
+                <button class="note-icon js-buy-ticket">
+                  <i class="ti-notepad"></i>
+                </button>
+                <button class="close-icon-2">
+                  <i class="ti-close"></i>
+                </button>
+              </div>
+            </div>
+            <div class="info-product">
+              <div class="info-product-sl">
+                <span class="info-1">2.00 Lon</span>
+                <span class="info-2">15.000</span>
+                <span class="info-3">15.000</span>
+              </div>
+              <div class="info-product-note">
+                <span>Sprite</span>
+                <span>Không lạnh</span>
+              </div>
+              <div class="manage-icon-btn">
+                <button class="note-icon js-buy-ticket">
+                  <i class="ti-notepad"></i>
+                </button>
+                <button class="close-icon-2">
+                  <i class="ti-close"></i>
+                </button>
+              </div>
+            </div>
+            <div class="info-product">
+              <div class="info-product-sl">
+                <span class="info-1">2.00 Lon</span>
+                <span class="info-2">15.000</span>
+                <span class="info-3">15.000</span>
+              </div>
+              <div class="info-product-note">
+                <span>Sprite</span>
+                <span>Không lạnh</span>
+              </div>
+              <div class="manage-icon-btn">
+                <button class="note-icon js-buy-ticket">
+                  <i class="ti-notepad"></i>
+                </button>
+                <button class="close-icon-2">
+                  <i class="ti-close"></i>
+                </button>
+              </div>
+            </div>
+            <div class="info-product">
+              <div class="info-product-sl">
+                <span class="info-1">2.00 Lon</span>
+                <span class="info-2">15.000</span>
+                <span class="info-3">15.000</span>
+              </div>
+              <div class="info-product-note">
+                <span>Sprite</span>
+                <span>Không lạnh</span>
+              </div>
+              <div class="manage-icon-btn">
+                <button class="note-icon js-buy-ticket">
+                  <i class="ti-notepad"></i>
+                </button>
+                <button class="close-icon-2">
+                  <i class="ti-close"></i>
+                </button>
+              </div>
+            </div>
+            <div class="info-product">
+              <div class="info-product-sl">
+                <span class="info-1">2.00 Lon</span>
+                <span class="info-2">15.000</span>
+                <span class="info-3">15.000</span>
+              </div>
+              <div class="info-product-note">
+                <span>Sprite</span>
+                <span>Không lạnh</span>
+              </div>
+              <div class="manage-icon-btn">
+                <button class="note-icon js-buy-ticket">
+                  <i class="ti-notepad"></i>
+                </button>
+                <button class="close-icon-2">
+                  <i class="ti-close"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="info-product-bill">
+            <div class="all-money">
+              <span>Tông Tiền</span>
+              <p>500.000 VND</p>
+            </div>
+            <button>Thanh Toán</button>
+          </div>
+        </div>
+
+        <footer class="footer-manage">
+          <button onclick="myManagePay()" class="footer-manage-book-icon">
+            <i class="ti-bookmark-alt"></i>
+            QL Đơn Hàng
+          </button>
+          <button
+            onclick="myFunction2()"
+            id="footer-manage-bar-icon"
+            class="footer-manage-bar-icon"
+          >
+            <i class="ti-bar-chart"></i>
+            QL Doanh Số
+          </button>
+        </footer>
+      </div>
+
+      <div onclick="myFunction1()" class="manage-sales" id="manage-sales">
+        <header class="sales-heading">
+          <button onclick="myFunction4()" id="js-arrow_icon" class="arrow_icon">
+            <i class="ti-arrow-left"></i>
+          </button>
+          <span>Quản lý doanh số</span>
+        </header>
+        <div class="manage-sales-turnover">
+          <div class="manage-sales-container">
+            <div class="sales-turnover">
+              <span class="sales-turnover-head">DOANH THU NGÀY</span>
+              <!-- <div id="eye-icon">
+                            <span class="show-btn">
+                                <i class="fas fa-eye"></i>
+                            </span>
+                        </div> -->
+
+              <span class="sales-item">4.999.999</span>
+            </div>
+            <div class="sales-order">
+              <div class="sales-order-item">
+                <span>ĐƠN HÀNG</span>
+                <span class="order-number">9</span>
+              </div>
+              <div class="sales-order-detail">
+                <button onclick="showHistory()" id="detail">
+                  Xem chi tiết
+                  <i class="angle-icon ti-angle-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <div id="history" class="manage-history">
+              <div class="manage-history-container">
+                <div
+                  onclick="closeHistory()"
+                  id="closeIcon"
+                  class="manage-history-close"
+                >
+                  <i class="ti-close"></i>
+                </div>
+                <header class="history-header">
+                  <i class="history-icon ti-alarm-clock"></i>
+                  Lịch Sử
+                </header>
+                <div class="history-item">
+                  <div class="history-list">
+                    <div class="history-heading">
+                      <h5>Bàn 1</h5>
+                      <div class="day-history">26/09/2022</div>
+                    </div>
+                    <div class="history-heading">
+                      <span>7h00 - 8h00</span>
+                      <div class="time-history">Thanh Toán : 9.000.000VND</div>
+                    </div>
+                  </div>
+                  <div class="history-list">
+                    <div class="history-heading">
+                      <h5>Bàn 1</h5>
+                      <div class="day-history">26/09/2022</div>
+                    </div>
+                    <div class="history-heading">
+                      <span>7h00 - 8h00</span>
+                      <div class="time-history">Thanh Toán : 9.000.000VND</div>
+                    </div>
+                  </div>
+                  <div class="history-list">
+                    <div class="history-heading">
+                      <h5>Bàn 1</h5>
+                      <div class="day-history">26/09/2022</div>
+                    </div>
+                    <div class="history-heading">
+                      <span>7h00 - 8h00</span>
+                      <div class="time-history">Thanh Toán : 9.000.000VND</div>
+                    </div>
+                  </div>
+                  <div class="history-list">
+                    <div class="history-heading">
+                      <h5>Bàn 1</h5>
+                      <div class="day-history">26/09/2022</div>
+                    </div>
+                    <div class="history-heading">
+                      <span>7h00 - 8h00</span>
+                      <div class="time-history">Thanh Toán : 9.000.000VND</div>
+                    </div>
+                  </div>
+                  <div class="history-list">
+                    <div class="history-heading">
+                      <h5>Bàn 1</h5>
+                      <div class="day-history">26/09/2022</div>
+                    </div>
+                    <div class="history-heading">
+                      <span>7h00 - 8h00</span>
+                      <div class="time-history">Thanh Toán : 9.000.000VND</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer id="js-footer-manage-oder" class="footer-manage-oder">
+          <button class="manage-order-btn">QL đơn hàng</button>
+
+          <button class="manage-menu-btn">QL thực đơn</button>
+        </footer>
+      </div>
+    </div>
+
+    <div class="modal js-modal">
+      <div class="modal-container">
+        <div class="modal-close js-modal-close">
+          <i class="ti-close"></i>
+        </div>
+        <header class="modal-header">
+          <i class="modal-heading-icon ti-notepad"></i>
+          Ghi Chú
+        </header>
+        <div class="modal-body">
+          <!-- <input type="text" class="modal-input" placeholder="ghi vào đây" > -->
+          <textarea
+            name="note"
+            class="modal-input"
+            cols="30"
+            rows="10"
+            placeholder="ghi vào đây"
+          ></textarea>
+        </div>
+        <button id="buy-tickets">
+          Oke
+          <i class="ti-check"></i>
+        </button>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+ 
+  </script>
+  
+</html>
