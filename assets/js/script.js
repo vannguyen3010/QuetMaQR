@@ -151,18 +151,20 @@ function myFunction4() {
 
 /*nhấn bàn hiên thị form oder của admin*/
 function myTable() {
-  menuList.style.display = "block";
-  menuLogin.style.display = "none";
+  managePay.style.display = "block";
+  manaGe.style.display = "none";
+}
+//close chi tiết
+function myClosess() {
+  managePay.style.display = "none";
+  manaGe.style.display = "block";
 }
 
-function myManagePay() {
-  managePay.style.display = "block";
-  menuBag.style.display = "none";
-}
-function myClosess() {
-  menuBag.style.display = "block";
-  managePay.style.display = "none";
-}
+// function myManagePay() {
+//   managePay.style.display = "block";
+//   menuBag.style.display = "none";
+// }
+
 
 
 

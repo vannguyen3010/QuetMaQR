@@ -82,8 +82,13 @@
     margin: 0;
   }
   .manage-table-item {
-    height: 73%;
+    height: 94%;
   }
+  .manage-icon-btn {
+    margin-left: 80%;
+    margin-top: -23px;
+    display: flex;
+}
   .manage-history {
     margin: 10px;
     width: 95%;
