@@ -1,51 +1,53 @@
-const container = document.querySelector(".container"),
-  pwShowHide = document.querySelectorAll(".showHidePw"),
-  pwFields = document.querySelectorAll(".password"),
-  signUp = document.querySelector(".signup-link"),
-  login = document.querySelector(".login-link"),
-  loginBtn = document.querySelector("#button"),
-  menuLogin = document.querySelector(".menu-login"),
-  detailt = document.querySelector("#detail"),
-  history = document.querySelector("#history"),
-  closeIcon = document.querySelector("#closeIcon"),
-  mainForm = document.querySelector("#froms"),
-  filTer = document.querySelector("#filter"),
-  menuList = document.querySelector("#menu-list"),
-  manaGe = document.querySelector("#manage"),
-  manageSales = document.querySelector("#manage-sales"),
-  closeArrow = document.querySelector("#close-arrow"),
-  closeArrows = document.querySelector("#js-arrow_icon"),
-  manageBar = document.querySelector("#footer-manage-bar-icon"),
-  modalMenu = document.querySelector(".modal-menu"),
-  buyBtns = document.querySelectorAll(".js-buy-ticket"),
-  modal = document.querySelector(".js-modal"),
-  modalClose = document.querySelector(".js-modal-close"),
-  tableBtns = document.querySelectorAll(".home_area-table"),
-  managePay = document.querySelector("#js-manage-pay"),
-  menuBag = document.querySelector("#js-menu-bag"),
-  closeArrowss = document.querySelector("#js-close-arrow-2"),
-  footerOder = document.querySelector('#js-footer-manage-oder');
+  // const container = document.querySelector(".container");
+  // const pwShowHide = document.querySelectorAll(".showHidePw");
+  // const pwFields = document.querySelectorAll(".password");
+  // const signUp = document.querySelector(".signup-link");
+  // const login = document.querySelector(".login-link");
+  const loginBtn = document.querySelector("#button");
+  const menuLogin = document.querySelector(".menu-login");
+  const detailt = document.querySelector("#detail");
+  const history = document.querySelector("#history");
+  const closeIcon = document.querySelector("#closeIcon");
+  const mainForm = document.querySelector("#froms");
+  const filTer = document.querySelector("#filter");
+  const menuList = document.querySelector("#menu-list");
+  const manaGe = document.querySelector("#manage");
+  const manageSales = document.querySelector("#manage-sales");
+  const closeArrow = document.querySelector("#close-arrow");
+  const closeArrows = document.querySelector("#js-arrow_icon");
+  const manageBar = document.querySelector("#footer-manage-bar-icon");
+  const modalMenu = document.querySelector(".modal-menu");
+  const buyBtns = document.querySelectorAll(".js-buy-ticket");
+  const modal = document.querySelector(".js-modal");
+  const modalClose = document.querySelector(".js-modal-close");
+  const tableBtns = document.querySelectorAll(".home_area-table");
+  const managePay = document.querySelector("#js-manage-pay");
+  const menuBag = document.querySelector("#js-menu-bag");
+  const closeArrowss = document.querySelector("#js-close-arrow-2");
+  const closeIcons = document.querySelector('#js-close-icon');
+
+  const footerOder = document.querySelector('#js-footer-manage-oder');
 
 //   js code to show/hide password and change icon
-pwShowHide.forEach((eyeIcon) => {
-  eyeIcon.addEventListener("click", () => {
-    pwFields.forEach((pwField) => {
-      if (pwField.type === "password") {
-        pwField.type = "text";
+// pwShowHide.forEach((eyeIcon) => {
+//   eyeIcon.addEventListener("click", () => {
+//     pwFields.forEach((pwField) => {
+//       if (pwField.type === "password") {
+//         pwField.type = "text";
 
-        pwShowHide.forEach((icon) => {
-          icon.classList.replace("uil-eye-slash", "uil-eye");
-        });
-      } else {
-        pwField.type = "password";
+//         pwShowHide.forEach((icon) => {
+//           icon.classList.replace("uil-eye-slash", "uil-eye");
+//         });
+//       } else {
+//         pwField.type = "password";
 
-        pwShowHide.forEach((icon) => {
-          icon.classList.replace("uil-eye", "uil-eye-slash");
-        });
-      }
-    });
-  });
-});
+//         pwShowHide.forEach((icon) => {
+//           icon.classList.replace("uil-eye", "uil-eye-slash");
+//         });
+//       }
+//     });
+//   });
+// });
 
 function hideBuyTickets() {
   modalMenu.classList.remove("open");
@@ -78,9 +80,19 @@ document.getElementById("mobile-menu").onclick = function () {
 };
 //end
 
+//thêm món trong QL thực đơn
+
 function onclickduavaogiohang() {
-  alert("đã thêm vào giỏ hàng");
+  confirm("đã thêm vào giỏ hàng! ");
 }
+//bỏ món trong QL thực đơn
+
+function onclickDelete() {
+  confirm('bạn có chắc chắn muốn xóa!');
+}
+
+
+
 function showMenu() {
   menuLogin.classList.add("open");
 }
@@ -105,25 +117,6 @@ login.addEventListener("click", () => {
 });
 // end login
 
-/*begin login*/
-
-  function xignUp() {
-    event.preventDefault();
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
-    var user = {
-      username: username,
-      password: password,
-    };
-    var json = JSON.stringify(user);
-
-    localStorage.setItem(username, json);
-    alert("đã thành công");
-    menuLogin.style.display = "block";
-    mainForm.style.display = "none";
-  }
-/*end login*/
-
 /*begin menu -list*/
 function myFunction() {
   menuList.style.display = "block";
@@ -145,8 +138,9 @@ function myFunction3() {
   menuList.style.display = "none";
 }
 function myFunction4() {
-  menuList.style.display = "block";
-  manageSales.style.display = "none";
+  manaGe.style.display = 'block';
+  manageSales.style.display = 'none';
+
 }
 
 /*nhấn bàn hiên thị form oder của admin*/
@@ -165,7 +159,47 @@ function myClosess() {
 //   menuBag.style.display = "none";
 // }
 
+function myDetail() {
+  manageSales.style.display = 'block';
+  managePay.style.display = 'none';
+}
+
+
+// begin login
 
 
 
 
+
+
+
+
+  //check icon password
+  // const pwShowHide = document.querySelectorAll(".showHidePw");
+  // const pwFields = document.querySelectorAll(".password");
+  pwShowHide.forEach((eyeIcon) => {
+    eyeIcon.addEventListener("click", () => {
+      pwFields.forEach((pwField) => {
+        if (pwField.type === "password") {
+          pwField.type = "text";
+  
+          pwShowHide.forEach((icon) => {
+            icon.classList.replace("uil-eye-slash", "uil-eye");
+          });
+        } else {
+          pwField.type = "password";
+  
+          pwShowHide.forEach((icon) => {
+            icon.classList.replace("uil-eye", "uil-eye-slash");
+          });
+        }
+      });
+    });
+  });
+  function hideBuyTickets() {
+    modalMenu.classList.remove("open");
+  }
+  modalMenu.addEventListener("click", hideBuyTickets);
+  modalMenu.addEventListener("click", function (event) {
+    event.stopPropagation();
+  });

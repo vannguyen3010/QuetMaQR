@@ -27,6 +27,8 @@ body {
   margin: 0 20px;
 }
 .container .forms {
+  position: relative;
+  bottom: -90px;
   line-height: 50px;
   display: flex;
   /* display: none; */
@@ -192,6 +194,7 @@ body {
   overflow: hidden;
   margin: 0 20px;
 }
+
 .manage {
   display: none;
   height: 100%;
@@ -199,6 +202,7 @@ body {
 }
 
 .manage__header {
+  position: relative;
   width: 100%;
   display: flex;
   background-color: #265df2;
@@ -222,6 +226,26 @@ body {
 }
 .manage__header-user-icon a {
   color: #fff;
+}
+
+.menu-logout {
+  display: none;
+  position: absolute;
+  right: 12px;
+  top: 40px;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  color: #000;
+  background-color: #fff;
+}
+.menu-logout button{
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  height: 100%;
+  font-weight: 500;
 }
 
 /* End manage */
@@ -299,7 +323,6 @@ body {
 }
 
 .home_area-img {
-  width: 35px;
   margin-top: 24px;
 }
 .home_area-heading {
@@ -314,13 +337,16 @@ body {
   height: 75px;
   justify-content: space-evenly;
 }
+.footer-item-TD {
+  line-height: 50px;
+  font-size: 20px;
+}
 
 .knife-img,
 .growth-img {
   font-size: 24px;
   font-weight: 500;
   height: 29px;
-  margin: 0 0 -10px;
   padding: 5px;
   align-items: center;
   display: flex;
@@ -381,9 +407,11 @@ body {
   width: 100%;
   background-color: rgb(65, 62, 231);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
 }
 
+#nav{
+  /* overflow: hidden; */
+}
 #nav > li {
   display: inline-block;
   position: relative;
@@ -412,6 +440,7 @@ ul#nav {
 }
 
 #nav .subnav {
+  z-index: 1;
   display: none;
   position: absolute;
   background-color: #fff;
@@ -425,15 +454,13 @@ ul#nav {
 }
 .mobile-menu-btn {
   display: none;
-  margin-left: 80%;
+  right: 0;
   padding: 13px 21px;
   position: absolute;
   cursor: pointer;
   color: #fff;
 }
-.mobile-menu-btn:hover {
-  background-color: rgb(25, 61, 179);
-}
+
 
 .menu-bag {
   width: 100%;
@@ -567,7 +594,7 @@ ul#nav {
   margin: 3px;
   border-radius: 5px;
   background-color: rgb(238, 225, 225);
-  height: 65%;
+  height: 73%;
   overflow-y: auto;
 }
 .info-product {
@@ -602,7 +629,7 @@ span.info-3 {
   color: red;
 }
 .manage-icon-btn {
-  margin-left: 95%;
+  margin-left: 90%;
   margin-top: -23px;
 }
 .note-icon {
@@ -637,6 +664,8 @@ span.info-3 {
 }
 
 .footer-detail{
+  position: relative;
+  top: 0;
   display: flex;
   width: 100%;
   height: 50px;
@@ -652,7 +681,7 @@ span.info-3 {
   width: 50%;
   height: 55px;
   color: #fff;
-  background-color: blue;
+  background-color: #265df2;
 }
 .footer-detail_btn1:hover,
 .footer-detail_btn2:hover{
@@ -924,7 +953,7 @@ span.info-3 {
 }
 
 .history-header {
-  background-color: #265df2;
+  background-color: #afbcdf;
   height: 50px;
   display: flex;
   align-items: center;
@@ -969,4 +998,301 @@ span.info-3 {
   height: 350px;
   flex-wrap: wrap;
   overflow-y: auto; /*nút kéo xuống khi khách hàng thêm nhiều sản phẩm vào giỏ hàng thì sẽ thu nhỏ lại và có nút kéo tutu xuống */
+}
+
+
+
+/*thêm món*/
+
+.modal-more {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+.modal-more.open{
+  display: flex;
+}
+.modal-more-container {
+  border-radius: 5px;
+  top: -50px;
+  width: 400px;
+  min-height: 380px;
+  position: relative;
+  background-color: #fff;
+}
+.modal-more-header {
+  width: 100%;
+  background-color: #265df2;
+  height: 50px;
+}
+.modal-more-header span {
+  font-size: 20px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+.modal-more-close {
+  position: absolute;
+  right: 0;
+}
+.modal-more-close {
+  position: absolute;
+  right: 0;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+.modal-more-close:hover{
+  opacity: 0.9;
+}
+.modal-more-head {
+  font-size: 15px;
+  background: rgb(238, 222, 222);
+}
+.modal-more-head span {
+  position: relative;
+  left: 10px;
+  color: #265df2;
+}
+.modal-more-body{
+  
+}
+.modal-more-body-header{
+  display: flex;
+}
+.modal-more-6{
+  width: 65%;
+  height: 160px;
+  background-color: rgb(230, 216, 216);
+}
+.modal-more-4{
+  width: 35%;
+  height: 160px;
+  background-color: rgb(195, 217, 218);
+}
+.modal-name {
+  position: relative;
+  top: 5px;
+}
+.modal-name span {
+  position: relative;
+  font-size: 15px;
+  left: 7px;
+}
+.modal-name-input {
+  height: 30px;
+  border-radius: 3px;
+  outline: 0;
+  border: none;
+  right: -13px;
+  position: relative;
+} 
+.modal-dishcode{
+  position: relative;
+  top: 11px;
+}
+.modal-dishcode span {
+  position: relative;
+  font-size: 15px;
+  left: 7px;
+}
+.modal-dishcode-input{
+  height: 30px;
+  border-radius: 3px;
+  outline: 0;
+  border: none;
+  right: -16px;
+  position: relative;
+}
+.modal-price{
+  position: relative;
+  top: 16px;
+}
+.modal-price span {
+  position: relative;
+  font-size: 15px;
+  left: 7px;
+}
+.modal-price-input{
+  height: 30px;
+  border-radius: 3px;
+  outline: 0;
+  border: none;
+  right: -18px;
+  position: relative;
+}
+.modal-capital{
+  position: relative;
+  top: 22px;
+}
+.modal-capital span {
+  position: relative;
+  font-size: 15px;
+  left: 7px;
+}
+.modal-capital-input{
+  height: 30px;
+  border-radius: 3px;
+  outline: 0;
+  border: none;
+  right: -18px;
+  position: relative;
+}
+
+.modal-more-descrybe {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  position: relative;
+  top: 8px;
+  left: 7px;
+}
+.modal-descrybe-input {
+  width: 80%;
+  height: 30px;
+  outline: 0;
+  border-radius: 3px;
+  border: 1px solid #4070f4;
+  position: relative;
+  left: 14px;
+}
+
+
+
+/*dropdown*/
+.dropdown {
+  top: -5px;
+  left: 30px;
+  width: 80%;
+  min-height: 6em;
+  position: relative;
+}
+.dropdown * {
+  box-sizing: border-box;
+}
+.select {
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px #2a2f3b solid;
+  border-radius: 0.5em;
+  padding: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.select-clicked{
+  border: 2px #26489a solid;
+  box-shadow: 0 0 0.8em #26489a;
+}
+
+.caret{
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;/*nút sổ xuống*/
+  border-right: 5px solid transparent;/*nút sổ xuống*/
+  border-top: 6px solid #000;
+  transition: 0.3s;
+}
+
+
+.caret-rotate{
+  transform: rotate(180deg);
+}
+.menu{
+  list-style: none;
+  padding: 0.2em 0.5em;
+  background: #323741;
+  border: 1px #363a43 solid;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+  border-radius: 0.5em;
+  color: #9fa5b5;
+  position: absolute;
+  top: 3em;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%);
+  opacity: 0;
+  display: none;
+  transition: 0.2s;
+  z-index: 1;
+}
+.menu li {
+  margin: 0.3em 0;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+.menu li:hover{
+  background: #2a2d35;
+}
+
+.active{
+  background: #23242a;
+
+}
+.menu-open{
+  display: block;
+  opacity: 1;
+}
+
+
+.footer_modal-more {
+  position: relative;
+  left: 53%;
+}
+.modal-confirm-btn {
+  width: 80px;
+  color: #fff;
+  height: 33px;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #26489a;
+  border: 1px solid #26489a;
+}
+.modal-confirm-btn:hover{
+  opacity: 0.9;
+}
+.modal-cancel-btn{
+  width: 80px;
+  color: #fff;
+  height: 33px;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #26489a;
+  border: 1px solid #26489a;
+}
+.modal-cancel-btn:hover{
+  opacity: 0.9;
+}
+.modal-more-edit {
+  display: grid;
+  height: 100%;
+  padding: 3px;
+}
+.modal-more-img {
+  width: 98%;
+  height: 100px;
+  background: cornflowerblue;
+  border: 1px solid #26489a;
+}
+.modal-more-img img {
+  width: 100%;
+  height: 100%;
+}
+.modal-more-btn{
+  cursor: pointer;
+}
+.modal-more-btn-cancel{
+  cursor: pointer;
 }

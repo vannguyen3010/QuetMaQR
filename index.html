@@ -5,31 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
-    />
-    <link
-      rel="stylesheet"
-      href="./assets/fontawesome-free-6.2.0-web/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="./assets/fontawesome-free-6.2.0-web/css/all.min.css" />
     <link rel="stylesheet" href="./assets/themify-icons/themify-icons.css" />
     <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <link rel="stylesheet" href="./assets/css/main.scss">
   </head>
   <body>
     <div class="container">
       <div class="forms" id="froms">
-        <div id="contactForm" class="form login">
+        <div class="form login">
           <span class="title">Login</span>
-          <form onsubmit="xignUp()" action="#">
+          
+          <!-- <form onsubmit="xignUp()" action="#"> -->
+            <form action="#">
+              <div class="input-field">
+                <input id="email" type="text"placeholder="Nhập tài khoản" required/>
+                      <!-- <input type="email" id="email" placeholder="Email"> -->
+                <i class="uil uil-envelope icon"></i>
+              </div>
             <div class="input-field">
-              <input id="username" type="text"placeholder="Nhập tài khoản" required/>
-              <i class="uil uil-envelope icon"></i>
-            </div>
-            <div class="input-field">
-              <input id="password" type="password" class="password" placeholder="Nhập password" required/>
-              <i class="uil uil-lock icon"></i>
-              <i class="uil uil-eye-slash showHidePw"></i>
+                <input id="password" type="password" class="password" placeholder="Nhập password" required/>
+                      <!-- <input type="password" id="password" placeholder="New Password"> -->
+
+                <i class="uil uil-lock icon"></i>
+                <i class="uil uil-eye-slash showHidePw"></i>
             </div>
 
             <div class="checkbox-text">
@@ -43,21 +43,15 @@
             <div class="input-field button">
               <!-- <input type="button" id="sighUp button login-btn"value="Login"> -->
               <!-- <button value="Login" type="submit" id="login login-btn button">Login</button> -->
-              <button type="submit">Submit</button>
+              <button onclick="login()">Login</button>
+              <button onclick="register()">Register</button>
 
               <!-- Login -->
             </div>
           </form>
-
-          <div class="login-signup">
-            <span class="text"
-              >Not a member?
-              <a href="#" class="text signup-link">Signup Now</a>
-            </span>
-          </div>
         </div>
 
-        <div class="form signup">
+        <!-- <div class="form signup">
           <span class="title">Registration</span>
 
           <form action="#">
@@ -109,18 +103,21 @@
               <a href="#" class="text login-link">Login Now</a>
             </span>
           </div>
-        </div>
+        </div> -->
       </div>
       <!-- end login -->
 
       <div class="manage menu-login" id="manage">
         <div class="manage__header">
           <h2>Quản lý</h2>
-          <div class="manage__header-user-icon">
+          <div onclick="clickUser()" id="js-user-icon" class="manage__header-user-icon">
             <a href="#">
               <i class="fa-regular fa-user"></i>
             </a>
           </div>
+        </div>
+        <div onclick="closeUser()" id="js-menu-logout" class="menu-logout">
+          <button>Đăng Xuất</button>
         </div>
 
         <div class="home-colum-2">
@@ -139,12 +136,13 @@
         <div class="footer-item">
           <button onclick="myFunction()" class="footer-filter-btn-1" id="filter">
             <i class="knife-img ti-write"></i>
-            QL THỰC ĐƠN
+            <span class="footer-item-TD">QL THỰC ĐƠN</span>
           </button>
 
           <button onclick="myFunction1()" class="col footer-filter-btn-2">
             <i class="growth-img ti-bar-chart"></i>
-            QL DOANH SỐ
+            <span class="footer-item-TD">QL DOANH SỐ</span>
+
           </button>
         </div>
       </div>
@@ -305,28 +303,28 @@
             </div>
           </div>
         </div>
-        <div class="info-product-bill">
+        <!-- <div class="info-product-bill">
           <div class="all-money">
             <span>Tông Tiền</span>
             <p>500.000 VND</p>
           </div>
           <button>Thanh Toán</button>
-        </div>
+        </div> -->
 
 
         <footer class="footer-detail">
-          <button class="footer-detail_btn1">
+          <button onclick="myDetail()" class="footer-detail_btn1">
             <i class="ti-bar-chart"></i>
             QL Doanh Số
           </button>
           <button class="footer-detail_btn2">
-            <i class="ti-bar-chart"></i>
-            QL Thực Đơn
+            <i class="fa-sharp fa-solid fa-plus"></i>
+            Thanh Toán
           </button>
         </footer>
       </div>
       
-      <div class=""></div>
+      
       <div class="modal-menu menu-list" id="menu-list">
         <header class="menu-header">
           <button onclick="myFunction3()" id="close-arrow" class="btn-img-arrow-1">
@@ -347,9 +345,9 @@
                 <i class="nav-arrow-down ti-arrow-circle-down"></i>
               </a>
               <ul class="subnav">
-                <li><a href="">Nước ngọt</a></li>
-                <li><a href="">Trà sữa</a></li>
-                <li><a href="">Nước ép</a></li>
+                <li><a href="#">Nước ngọt</a></li>
+                <li><a href="#">Trà sữa</a></li>
+                <li><a href="#">Nước ép</a></li>
               </ul>
             </li>
             <li>
@@ -368,11 +366,7 @@
 
         <div id="js-menu-bag" class="menu-bag">
           <div class="menu-list-tab">
-            <img
-              class="product-img"
-              src="	https://gmarket24h.com/images/thumbs/0006384_nuoc-ngot-coca-cola-lon-sleek-320ml_510.png"
-              alt=""
-            />
+            <img class="product-img" src="	https://gmarket24h.com/images/thumbs/0006384_nuoc-ngot-coca-cola-lon-sleek-320ml_510.png" alt=""/>
             <div class="product-heading">
               <span>Coca Cola </span>
             </div>
@@ -380,230 +374,25 @@
               <button onclick="onclickduavaogiohang()" class="check-icon">
                 <i class="ti-check"></i>
               </button>
-              <button class="close-icon">
+              <button onclick="onclickDelete()" class="close-icon">
                 <i class="ti-close"></i>
               </button>
             </div>
-          </div>
-
-          <div class="menu-list-tab">
-            <img
-              class="product-img"
-              src="	https://gmarket24h.com/images/thumbs/0006384_nuoc-ngot-coca-cola-lon-sleek-320ml_510.png"
-              alt=""
-            />
-            <div class="product-heading">
-              <span>Coca Cola </span>
-            </div>
-            <div class="menu-icon-btn">
-              <button onclick="onclickduavaogiohang()" class="check-icon">
-                <i class="ti-check"></i>
-              </button>
-              <button class="close-icon">
-                <i class="ti-close"></i>
-              </button>
-            </div>
-          </div>
-          <div class="menu-list-tab">
-            <img
-              class="product-img"
-              src="	https://gmarket24h.com/images/thumbs/0006384_nuoc-ngot-coca-cola-lon-sleek-320ml_510.png"
-              alt=""
-            />
-            <div class="product-heading">
-              <span>Coca Cola </span>
-            </div>
-            <div class="menu-icon-btn">
-              <button onclick="onclickduavaogiohang()" class="check-icon">
-                <i class="ti-check"></i>
-              </button>
-              <button class="close-icon">
-                <i class="ti-close"></i>
-              </button>
-            </div>
-          </div>
-          <div class="menu-list-tab">
-            <img
-              class="product-img"
-              src="	https://gmarket24h.com/images/thumbs/0006384_nuoc-ngot-coca-cola-lon-sleek-320ml_510.png"
-              alt=""
-            />
-            <div class="product-heading">
-              <span>Coca Cola </span>
-            </div>
-            <div class="menu-icon-btn">
-              <button onclick="onclickduavaogiohang()" class="check-icon">
-                <i class="ti-check"></i>
-              </button>
-              <button class="close-icon">
-                <i class="ti-close"></i>
-              </button>
-            </div>
-          </div>
-          <div class="menu-list-tab">
-            <img
-              class="product-img"
-              src="	https://gmarket24h.com/images/thumbs/0006384_nuoc-ngot-coca-cola-lon-sleek-320ml_510.png"
-              alt=""
-            />
-            <div class="product-heading">
-              <span>Coca Cola </span>
-            </div>
-            <div class="menu-icon-btn">
-              <button onclick="onclickduavaogiohang()" class="check-icon">
-                <i class="ti-check"></i>
-              </button>
-              <button class="close-icon">
-                <i class="ti-close"></i>
-              </button>
-            </div>
-          </div>
-          <div class="menu-list-tab">
-            <img
-              class="product-img"
-              src="	https://gmarket24h.com/images/thumbs/0006384_nuoc-ngot-coca-cola-lon-sleek-320ml_510.png"
-              alt=""
-            />
-            <div class="product-heading">
-              <span>Coca Cola </span>
-            </div>
-            <div class="menu-icon-btn">
-              <button onclick="onclickduavaogiohang()" class="check-icon">
-                <i class="ti-check"></i>
-              </button>
-              <button class="close-icon">
-                <i class="ti-close"></i>
-              </button>
-            </div>
-          </div>
-          <div class="menu-list-tab">
-            <img
-              class="product-img"
-              src="	https://gmarket24h.com/images/thumbs/0006384_nuoc-ngot-coca-cola-lon-sleek-320ml_510.png"
-              alt=""
-            />
-            <div class="product-heading">
-              <span>Coca Cola </span>
-            </div>
-            <div class="menu-icon-btn">
-              <button onclick="onclickduavaogiohang()" class="check-icon">
-                <i class="ti-check"></i>
-              </button>
-              <button class="close-icon">
-                <i class="ti-close"></i>
-              </button>
-            </div>
-          </div>
-          <div class="menu-list-tab">
-            <img
-              class="product-img"
-              src="	https://gmarket24h.com/images/thumbs/0006384_nuoc-ngot-coca-cola-lon-sleek-320ml_510.png"
-              alt=""
-            />
-            <div class="product-heading">
-              <span>Coca Cola </span>
-            </div>
-            <div class="menu-icon-btn">
-              <button onclick="onclickduavaogiohang()" class="check-icon">
-                <i class="ti-check"></i>
-              </button>
-              <button class="close-icon">
-                <i class="ti-close"></i>
-              </button>
-            </div>
-          </div>  
-          <div class="menu-list-tab">
-            <img
-              class="product-img"
-              src="	https://gmarket24h.com/images/thumbs/0006384_nuoc-ngot-coca-cola-lon-sleek-320ml_510.png"
-              alt=""
-            />
-            <div class="product-heading">
-              <span>Coca Cola </span>
-            </div>
-            <div class="menu-icon-btn">
-              <button onclick="onclickduavaogiohang()" class="check-icon">
-                <i class="ti-check"></i>
-              </button>
-              <button class="close-icon">
-                <i class="ti-close"></i>
-              </button>
-            </div>
-          </div>
-          <div class="menu-list-tab">
-            <img
-              class="product-img"
-              src="	https://gmarket24h.com/images/thumbs/0006384_nuoc-ngot-coca-cola-lon-sleek-320ml_510.png"
-              alt=""
-            />
-            <div class="product-heading">
-              <span>Coca Cola </span>
-            </div>
-            <div class="menu-icon-btn">
-              <button onclick="onclickduavaogiohang()" class="check-icon">
-                <i class="ti-check"></i>
-              </button>
-              <button class="close-icon">
-                <i class="ti-close"></i>
-              </button>
-            </div>
-          </div>
-          <div class="menu-list-tab">
-            <img
-              class="product-img"
-              src="	https://gmarket24h.com/images/thumbs/0006384_nuoc-ngot-coca-cola-lon-sleek-320ml_510.png"
-              alt=""
-            />
-            <div class="product-heading">
-              <span>Coca Cola </span>
-            </div>
-            <div class="menu-icon-btn">
-              <button onclick="onclickduavaogiohang()" class="check-icon">
-                <i class="ti-check"></i>
-              </button>
-              <button class="close-icon">
-                <i class="ti-close"></i>
-              </button>
-            </div>
-          </div>
-          <div class="menu-list-tab">
-            <img
-              class="product-img"
-              src="	https://gmarket24h.com/images/thumbs/0006384_nuoc-ngot-coca-cola-lon-sleek-320ml_510.png"
-              alt=""
-            />
-            <div class="product-heading">
-              <span>Coca Cola </span>
-            </div>
-            <div class="menu-icon-btn">
-              <button onclick="onclickduavaogiohang()" class="check-icon">
-                <i class="ti-check"></i>
-              </button>
-              <button class="close-icon">
-                <i class="ti-close"></i>
-              </button>
-            </div>
-          </div>
-          <div class="menu-list-tab">
-            <img
-              class="product-img"
-              src="	https://gmarket24h.com/images/thumbs/0006384_nuoc-ngot-coca-cola-lon-sleek-320ml_510.png"
-              alt=""
-            />
-            <div class="product-heading">
-              <span>Coca Cola </span>
-            </div>
-            <div class="menu-icon-btn">
-              <button onclick="onclickduavaogiohang()" class="check-icon">
-                <i class="ti-check"></i>
-              </button>
-              <button class="close-icon">
-                <i class="ti-close"></i>
-              </button>
-            </div>
+            
           </div>
         </div>
-        <!-- <div id="js-manage-pay" class="manage-pay">
+        <footer class="footer-manage">
+          <button id="js-buy-tickets" class="footer-manage-book-icon">
+            <i class="fa-sharp fa-solid fa-plus js-modal-close"></i>
+            Thêm Món
+          </button>
+          <button onclick="myFunction2()" id="footer-manage-bar-icon" class="footer-manage-bar-icon">
+            <i class="ti-bar-chart"></i>
+            QL Doanh Số
+          </button>
+        </footer>
+        <!-- <div class="">
+
           <header class="manage-head">
             <button onclick="myClosess()" id="close-arrow-2" class="btn-img-arrow-2">
               <i class="fa-sharp fa-solid fa-arrow-left"></i>
@@ -767,22 +556,120 @@
             </div>
             <button>Thanh Toán</button>
           </div>
+          <footer class="footer-manage">
+            <button onclick="myManagePay()" class="footer-manage-book-icon">
+              <i class="ti-bookmark-alt"></i>
+              Thêm Món
+            </button>
+            <button onclick="myFunction2()" id="footer-manage-bar-icon" class="footer-manage-bar-icon">
+              <i class="ti-bar-chart"></i>
+              QL Doanh Số
+            </button>
+          </footer>
         </div> -->
-
-        <footer class="footer-manage">
-          <button onclick="myManagePay()" class="footer-manage-book-icon">
-            <i class="ti-bookmark-alt"></i>
-            Thêm Món
-          </button>
-          <button onclick="myFunction2()" id="footer-manage-bar-icon" class="footer-manage-bar-icon">
-            <i class="ti-bar-chart"></i>
-            QL Doanh Số
-          </button>
-        </footer>
+        </div> 
+        <div onclick="myFunction1()" class="manage-sales" id="manage-sales">
+          <header class="sales-heading">
+            <button onclick="myFunction4()" id="js-arrow_icon" class="arrow_icon">
+              <i class="ti-arrow-left"></i>
+            </button>
+            <span>Quản lý doanh số</span>
+          </header>
+          <div class="manage-sales-turnover">
+            <div class="manage-sales-container">
+              <div class="sales-turnover">
+                <span class="sales-turnover-head">DOANH THU NGÀY</span>
+               
+                <span class="sales-item">4.999.999</span>
+              </div>
+              <div class="sales-order">
+                <div class="sales-order-item">
+                  <span>ĐƠN HÀNG</span>
+                  <span class="order-number">9</span>
+                </div>
+                <div class="sales-order-detail">
+                  <button onclick="showHistory()" id="detail">
+                    Xem chi tiết
+                    <i class="angle-icon ti-angle-right"></i>
+                  </button>
+                </div>
+              </div>
+  
+              <div id="history" class="manage-history">
+                <div class="manage-history-container">
+                  <div onclick="closeHistory()" id="closeIcon"class="manage-history-close">
+                    <i class="ti-close"></i>
+                  </div>
+                  <header class="history-header">
+                    <i class="history-icon ti-alarm-clock"></i>
+                    Lịch Sử
+                  </header>
+                  <div class="history-item">
+                    <div class="history-list">
+                      <div class="history-heading">
+                        <h5>Bàn 1</h5>
+                        <div class="day-history">26/09/2022</div>
+                      </div>
+                      <div class="history-heading">
+                        <span>7h00 - 8h00</span>
+                        <div class="time-history">Thanh Toán : 9.000.000VND</div>
+                      </div>
+                    </div>
+                    <div class="history-list">
+                      <div class="history-heading">
+                        <h5>Bàn 1</h5>
+                        <div class="day-history">26/09/2022</div>
+                      </div>
+                      <div class="history-heading">
+                        <span>7h00 - 8h00</span>
+                        <div class="time-history">Thanh Toán : 9.000.000VND</div>
+                      </div>
+                    </div>
+                    <div class="history-list">
+                      <div class="history-heading">
+                        <h5>Bàn 1</h5>
+                        <div class="day-history">26/09/2022</div>
+                      </div>
+                      <div class="history-heading">
+                        <span>7h00 - 8h00</span>
+                        <div class="time-history">Thanh Toán : 9.000.000VND</div>
+                      </div>
+                    </div>
+                    <div class="history-list">
+                      <div class="history-heading">
+                        <h5>Bàn 1</h5>
+                        <div class="day-history">26/09/2022</div>
+                      </div>
+                      <div class="history-heading">
+                        <span>7h00 - 8h00</span>
+                        <div class="time-history">Thanh Toán : 9.000.000VND</div>
+                      </div>
+                    </div>
+                    <div class="history-list">
+                      <div class="history-heading">
+                        <h5>Bàn 1</h5>
+                        <div class="day-history">26/09/2022</div>
+                      </div>
+                      <div class="history-heading">
+                        <span>7h00 - 8h00</span>
+                        <div class="time-history">Thanh Toán : 9.000.000VND</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer id="js-footer-manage-oder" class="footer-manage-oder">
+            <button class="manage-order-btn">QL đơn hàng</button>
+  
+            <button class="manage-menu-btn">QL thực đơn</button>
+          </footer>
+        </div> 
       </div>
-      
 
-      <div onclick="myFunction1()" class="manage-sales" id="manage-sales">
+
+      <!-- <div onclick="myFunction1()" class="manage-sales" id="manage-sales">
         <header class="sales-heading">
           <button onclick="myFunction4()" id="js-arrow_icon" class="arrow_icon">
             <i class="ti-arrow-left"></i>
@@ -793,12 +680,7 @@
           <div class="manage-sales-container">
             <div class="sales-turnover">
               <span class="sales-turnover-head">DOANH THU NGÀY</span>
-              <!-- <div id="eye-icon">
-                            <span class="show-btn">
-                                <i class="fas fa-eye"></i>
-                            </span>
-                        </div> -->
-
+             
               <span class="sales-item">4.999.999</span>
             </div>
             <div class="sales-order">
@@ -884,7 +766,7 @@
 
           <button class="manage-menu-btn">QL thực đơn</button>
         </footer>
-      </div>
+      </div> -->
     </div>
 
     <div class="modal js-modal">
@@ -898,13 +780,7 @@
         </header>
         <div class="modal-body">
           <!-- <input type="text" class="modal-input" placeholder="ghi vào đây" > -->
-          <textarea
-            name="note"
-            class="modal-input"
-            cols="30"
-            rows="10"
-            placeholder="ghi vào đây"
-          ></textarea>
+          <textarea name="note"class="modal-input" cols="30" rows="10" placeholder="ghi vào đây"></textarea>
         </div>
         <button id="buy-tickets">
           Oke
@@ -912,8 +788,95 @@
         </button>
       </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
-    <script src="./assets/js/script.js"></script>
+     <div id="js-modal-more" class="modal-more">
+        <div class="modal-more-container">
+            <div id="js-modal-more-close" class="modal-more-close">
+              <i class="ti-close"></i>
+            </div>
+            <header class="modal-more-header">
+              <span>Thêm món</span>
+            </header>
+            <div class="modal-more-head">
+              <span>Thông tin chung</span>
+            </div>
+            <div class="modal-more-body">
+              <div class="modal-more-body-header">
+                <div class="modal-more-6">
+                   <div class="modal-name">
+                      <span>Tên Món *</span>
+                      <input type="text" class="modal-name-input" placeholder="">
+                   </div>
+                   <div class="modal-dishcode">
+                      <span>Mã Món *</span>
+                      <input type="text" class="modal-dishcode-input" placeholder="">
+                   </div>
+                   <div class="modal-price">
+                      <span>Giá Bán *</span>
+                      <input type="text" class="modal-price-input" placeholder="">
+                   </div>
+                    <div class="modal-capital">
+                      <span>Giá Vốn *</span>
+                      <input type="text" class="modal-capital-input" placeholder="">
+                    </div>
+                  </div>
+                <div class="modal-more-4">
+                  <div class="modal-more-edit">
+                    <div class="modal-more-img">
+                      <img src="./assets/img/themon.png" alt="">
+                    </div>
+                      <button class="modal-more-btn">
+                        <i class="ti-image"></i>
+                        Chọn ảnh
+                      </button>
+                      <button class="modal-more-btn-cancel">
+                        <i class="ti-close"></i>
+                        Xóa ảnh
+                      </button>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-more-descrybe">
+                <span>Mô Tả</span>
+                <input type="text" class="modal-descrybe-input" placeholder="">
+              </div>
+                <div class="modal-more-descrybe">
+                  <span>Loại</span>
+                  <div class="dropdown">
+                    <div class="select">
+                        <span class="selected">Hay Dùng</span>
+                        <div class="caret"></div>
+                    </div>
+                    <ul class="menu">
+                        <li>Món Ăn</li>
+                        <li>Nước uống</li>
+                        <li class="active">Hay Dùng</li>
+                        <li>Nước Ngọt</li>
+                        <li>Trà sữa</li>
+                        <li>Nước ép</li>
+                    </ul>
+                  </div>
+              </div>
+              <footer class="footer_modal-more">
+                  <button class="modal-confirm-btn">Xác Nhận</button>
+                  <button class="modal-cancel-btn">Hủy</button>
+              </footer>
+            </div>
+        </div>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <!-- <script src="./assets/js/script.js"></script> -->
+    <script src="./assets/js/scripts.js"></script>
+    <script src="./assets/js/login.js"></script>
+    <script src="./assets/js/checkpass.js"></script>
+    <script src="./assets/js/dropdow.js"></script>
+    <script src="./assets/js/modal.js"></script>
+
   </body>
  
   </script>

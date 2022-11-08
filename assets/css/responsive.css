@@ -8,21 +8,27 @@
     margin-left: 10%;
   }
   #nav {
+    font-size: 20px;
+    font-weight: 400;
+    display: block;
+    height: 46px;
+    width: 100%;
+    position: absolute;
+    background-color: blue;
+    left: 0;
+    overflow: hidden;
   }
   #nav > li {
     display: block;
   }
   #nav li a {
-    color: #000;
+    color: #fff;
   }
-  #nav {
-    display: none;
-    height: 185px;
-    width: 100%;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.4);
-    left: 0;
+  #nav .subnav {
+    z-index: 99;
+    position: initial;
   }
+  
   .mobile-menu-btn {
     display: block;
     z-index: 99;
@@ -67,6 +73,7 @@
     height: 455px;
   }
   .manage-table {
+    height: 33%;
     display: grid;
     align-items: center;
     justify-content: center;
@@ -82,7 +89,7 @@
     margin: 0;
   }
   .manage-table-item {
-    height: 94%;
+    height: 100%;
   }
   .manage-icon-btn {
     margin-left: 80%;
@@ -120,6 +127,9 @@
   .growth-img {
     margin: 0;
   }
+  .footer-item-TD {
+    font-size: 15px;
+}
 }
 
 /*Tablet*/

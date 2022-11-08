@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/styleClient.css" />
-    <link
-      rel="stylesheet"
-      href="./assets/fontawesome-free-6.2.0-web/css/all.min.css"
-    />
+    <link rel="stylesheet" href="./assets/fontawesome-free-6.2.0-web/css/all.min.css"/>
     <link rel="stylesheet" href="./assets/themify-icons/themify-icons.css" />
     <link rel="stylesheet" href="./assets/css/reponsiveClient.css" />
   </head>
@@ -23,11 +20,7 @@
           <div class="search-icon">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
-          <input
-            class="input-heading"
-            type="text"
-            placeholder="Nhập mã hoặc tên hàng để kiếm "
-          />
+          <input class="input-heading" type="text" placeholder="Nhập mã hoặc tên hàng để kiếm "/>
         </div>
         <div id="headers">
           <div id="mobile-menu" class="mobile-menu-btn">
@@ -66,15 +59,8 @@
       </div>
       <div class="all-col">
         <div class="client-manage">
-          <div
-            onclick="myClosess()"
-            class="client-manage-item js-client-manage-item"
-          >
-            <img
-              class="water-img-1"
-              src="./assets/img/img-water/anh1.png"
-              alt=""
-            />
+          <div onclick="myClosess()" class="client-manage-item js-client-manage-item">
+            <img class="water-img-1" src="./assets/img/img-water/anh1.png" alt="" />
             <div class="client-heading">
               <span>Trà Sữa</span>
               <li>28.000</li>
@@ -95,7 +81,7 @@
               </div>
             </div>
           </div>
-          <div class="client-manage-item js-client-manage-item">
+          <div  class="client-manage-item js-client-manage-item">
             <img
               class="water-img-1"
               src="./assets/img/img-water/anh1.png"
@@ -359,8 +345,9 @@
       </div>
       <footer class="footer-client">
         <button id="js-client-check" class="col-2 client-check">
-          <i class="fa-sharp fa-solid fa-check-double"></i>
-          <span>Xác nhận Gọi</span>
+          <i class="fa-sharp fa-solid fa-plus"></i>
+
+          <span>Thêm món</span>
         </button>
         <button
           onclick="myFunction5()"
@@ -394,11 +381,11 @@
             />
             <span>Trà Sữa</span>
             <div class="bill-icon-btn">
-              <button class="tru-icon-btn">
+              <button onclick="onClients()" class="tru-icon-btn">
                 <i class="fa-solid fa-minus"></i>
               </button>
-              <div class="bill-amount">1</div>
-              <button class="cong-icon-btn">
+              <div id="amount" class="bill-amount">0</div>
+              <button onclick="onClient()" class="cong-icon-btn">
                 <i class="fa-solid fa-plus"></i>
               </button>
             </div>
@@ -600,8 +587,8 @@
           Xác Nhận Gọi
         </button>
         <button class="col-2 confirm-btn">
-          <i class="fa-sharp fa-solid fa-check-double"></i>
-          Xem Menu
+          <i class="fa-sharp fa-solid fa-money-bill"></i>
+          Thanh Toán
         </button>
       </footer>
     </div>
@@ -617,13 +604,7 @@
         </header>
         <div class="modal-body">
           <!-- <input type="text" class="modal-input" placeholder="ghi vào đây" > -->
-          <textarea
-            name="note"
-            class="modal-input"
-            cols="30"
-            rows="10"
-            placeholder="ghi vào đây"
-          ></textarea>
+          <textarea name="note" class="modal-input" cols="30" rows="10" placeholder="ghi vào đây"></textarea>
         </div>
         <button id="buy-tickets">
           Oke
@@ -631,6 +612,13 @@
         </button>
       </div>
     </div>
+    <!-- <div class="modal-more">
+      <div class="modal-more-container">
+        <header class="modal-more-header">
+
+        </header>
+      </div>
+    </div> -->
     <script>
       const buyBtns = document.querySelectorAll(".js-buy-ticket");
       const modal = document.querySelector(".js-modal");
@@ -643,9 +631,9 @@
       const clientIcon = document.querySelector("#js-client-icon");
       const clientManages = document.querySelectorAll(".js-client-manage-item");
 
-      clientCheck.onclick = function () {
-        alert("Đã xác nhận gọi");
-      };
+      // clientCheck.onclick = function () {
+      //   alert("Đã xác nhận gọi");
+      // };
 
       //   function myClosess() {
       //     clientIcon.style.display = "block";
@@ -732,6 +720,21 @@
         document.querySelector("#count").innerText = count;
         document.getElementById("count").innerText = count;
       }
+      //end
+      // tăng giảm sản phảm mục chon
+      var amount = 0;
+      function onClient() {
+        amount++;
+        document.querySelector('#amount').innerText = amount;
+        document.getElementById('amount').innerText = amount;
+      }
+      function onClients() {
+        amount--;
+        document.querySelector('#amount').innerText = amount;
+        document.getElementById('amount').innerText = amount;
+      }
+
+
     </script>
   </body>
 </html>
